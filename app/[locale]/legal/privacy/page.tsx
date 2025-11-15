@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { notFound } from "next/navigation";
 import { isLocale, locales } from "@/lib/locales";
 import type { Locale } from "@/lib/locales";
@@ -6,6 +7,10 @@ import {
   COMPANY_NAME_JA,
   COMPANY_EMAIL,
 } from "@/lib/config";
+
+const PRIVACY_DOC_URL =
+  "https://docs.google.com/document/d/1ahnUTdar62_Vk9_elCf-V1QSsLvNzL_BwMxtAjlphqw/preview";
+const COMPANY_SITE_URL = "https://u-rec.jp/";
 
 interface PrivacyPageProps {
   params: Promise<{ locale: string }>;
@@ -33,7 +38,46 @@ export default async function PrivacyPage({ params }: PrivacyPageProps) {
           {t.eyebrow}
         </p>
         <h1 className="mt-2 text-3xl font-semibold text-white">{t.title}</h1>
-        <p className="mt-2">{t.intro}</p>
+        <p className="mt-2 text-white/80">{t.intro}</p>
+      </section>
+
+      <section className="rounded-2xl border border-white/10 bg-white/[0.02] p-4">
+        <div className="aspect-[8.5/11] w-full overflow-hidden rounded-xl border border-white/10 bg-white/5">
+          <iframe
+            src={PRIVACY_DOC_URL}
+            title="Privacy Policy Document"
+            className="h-full w-full border-0"
+          />
+        </div>
+        <p className="mt-3 text-xs text-white/60">
+          {locale === "ja" ? (
+            <>
+              うまく表示されない場合は{" "}
+              <a
+                href={PRIVACY_DOC_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="text-[var(--accent)] underline"
+              >
+                Google ドキュメント
+              </a>
+              から直接ご確認ください。
+            </>
+          ) : (
+            <>
+              If the embedded document does not load, open it{" "}
+              <a
+                href={PRIVACY_DOC_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="text-[var(--accent)] underline"
+              >
+                on Google Docs
+              </a>
+              .
+            </>
+          )}
+        </p>
       </section>
 
       {t.sections.map((section) => (
@@ -64,7 +108,7 @@ const copy: Record<
   {
     eyebrow: string;
     title: string;
-    intro: string;
+    intro: ReactNode;
     contact: string;
     sections: { title: string; body: string; items?: string[] }[];
   }
@@ -72,7 +116,20 @@ const copy: Record<
   ja: {
     eyebrow: "LEGAL",
     title: "プライバシーポリシー",
-    intro: `このサイトは ${COMPANY_NAME_JA} が運営し、Googleフォームを通じてお問い合わせ内容を収集します。以下の通り、取得情報と利用目的を明示します。`,
+    intro: (
+      <>
+        このサイトは{" "}
+        <a
+          href={COMPANY_SITE_URL}
+          target="_blank"
+          rel="noreferrer"
+          className="text-[var(--accent)] underline"
+        >
+          {COMPANY_NAME_JA}
+        </a>{" "}
+        が運営し、Googleフォームを通じてお問い合わせ内容を収集します。以下の通り、取得情報と利用目的を明示します。
+      </>
+    ),
     contact: "お問い合わせ窓口",
     sections: [
       {
@@ -105,7 +162,20 @@ const copy: Record<
   en: {
     eyebrow: "LEGAL",
     title: "Privacy Policy",
-    intro: `${COMPANY_NAME_EN} operates this portal and collects inquiries via Google Forms. The following statements clarify what is collected and how it is used.`,
+    intro: (
+      <>
+        <a
+          href={COMPANY_SITE_URL}
+          target="_blank"
+          rel="noreferrer"
+          className="text-[var(--accent)] underline"
+        >
+          {COMPANY_NAME_EN}
+        </a>{" "}
+        operates this portal and collects inquiries via Google Forms. The following statements
+        clarify what is collected and how it is used.
+      </>
+    ),
     contact: "Contact",
     sections: [
       {
