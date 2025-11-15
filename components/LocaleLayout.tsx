@@ -26,6 +26,7 @@ const navItems: Record<Locale, NavItem[]> = {
     { label: "Teaching", href: "/ja/teaching", description: "早稲田での授業" },
     { label: "サービス", href: "/ja/services", description: "提供メニュー" },
     { label: "お問い合わせ", href: "/ja/contact", description: "Googleフォームへ" },
+    { label: "法務", href: "/ja/legal/privacy", description: "プライバシーポリシー" },
   ],
   en: [
     { label: "Home", href: "/en", description: "Overview" },
@@ -36,6 +37,7 @@ const navItems: Record<Locale, NavItem[]> = {
     { label: "Teaching", href: "/en/teaching", description: "Waseda lecture" },
     { label: "Services", href: "/en/services", description: "Offerings" },
     { label: "Contact", href: "/en/contact", description: "Google Form" },
+    { label: "Legal", href: "/en/legal/privacy", description: "Privacy policy" },
   ],
 };
 
