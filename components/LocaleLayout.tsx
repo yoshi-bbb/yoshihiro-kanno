@@ -42,8 +42,8 @@ const navItems: Record<Locale, NavItem[]> = {
 };
 
 const strapline: Record<Locale, string> = {
-  ja: "AIガバナンス / AIセーフティに特化したエンジニア・起業家。一次情報で判断できるよう、ログとプロダクトを公開しています。",
-  en: "Founder-engineer focused on AI governance & safety. This portal surfaces first-hand build logs so you can evaluate without hype.",
+  ja: "個人で AIガバナンス / AIセーフティ基盤を設計・実装するエンジニア。一次情報を自分のポータルで公開しています。",
+  en: "Founder-engineer building AI governance & safety platforms hands-on and sharing the first-hand evidence on this personal portal.",
 };
 
 const companyLocation: Record<Locale, string> = {

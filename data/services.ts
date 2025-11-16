@@ -17,8 +17,8 @@ export const services: ServiceItem[] = [
       en: "AI Governance Design & PoC Support",
     },
     description: {
-      ja: "危険操作の分類、ポリシー（Rego）化、Gate Runtime を用いた PoC をワンセットで設計。既存システムとの統合も含めたロードマップを定義します。",
-      en: "Classify risky operations, encode policies in Rego, and run a Gate Runtime-based PoC with a roadmap for integration into your stack.",
+      ja: "危険操作の分類とポリシー設計、AIセキュリティ基盤の PoC 構築までをワンセットで設計。既存システムとの統合ロードマップも定義します。",
+      en: "Classify risky operations, design the governing policies, and build a PoC around the AI security platform with a roadmap for integration into your stack.",
     },
     price: {
       ja: "150万円〜 / 6週間",
@@ -27,14 +27,14 @@ export const services: ServiceItem[] = [
     deliverables: {
       ja: [
         "現状把握ワークショップ",
-        "ポリシーカタログ（Rego）",
-        "署名付きログ設計書",
+        "ポリシーカタログ",
+        "ログ / 監査の設計メモ",
         "PoC レポート / ローンチ計画",
       ],
       en: [
         "Current-state workshop",
-        "Policy catalog (Rego)",
-        "Signed log design doc",
+        "Policy catalog",
+        "Logging / audit design notes",
         "PoC report & launch plan",
       ],
     },
@@ -46,8 +46,8 @@ export const services: ServiceItem[] = [
       en: "AI Development (LLM / Diffusion / Physical AI)",
     },
     description: {
-      ja: "PrimePic や Gate Runtime で培った生成/制御ワークフローを活かし、LLMアプリ、画像生成、物理AI制御までをハンズオンで開発します。",
-      en: "Hands-on development for LLM apps, diffusion workflows, and physical AI controllers leveraging the pipelines proven in PrimePic and Gate Runtime.",
+      ja: "これまでに構築してきた生成 / 制御ワークフローを活かし、LLMアプリや画像生成、物理AI制御までをハンズオンで開発します。",
+      en: "Hands-on development for LLM apps, diffusion workflows, and physical AI controllers by reusing the pipelines I have built so far.",
     },
     price: {
       ja: "月額 180万円〜（稼働 0.8 FTE 想定）",
@@ -75,8 +75,8 @@ export const services: ServiceItem[] = [
       en: "AI Advisory / Fractional CTO",
     },
     description: {
-      ja: "アーキレビュー、セキュリティレビュー、投資家 Q&A 対応を月次で伴走。Gate Runtime やログ指針を参考情報として提供します。",
-      en: "Monthly engagements covering architecture reviews, security posture checks, and investor Q&A prep with Gate Runtime and logging guidelines as reference implementations.",
+      ja: "アーキレビュー、セキュリティレビュー、投資家 Q&A 対応を月次で伴走。自分が運用しているログ指針や基盤設計の知見を参考情報として提供します。",
+      en: "Monthly engagements covering architecture reviews, security posture checks, and investor Q&A prep, sharing the logging and platform design practices I run myself as references.",
     },
     price: {
       ja: "月額 60万円〜（月 2〜3 回セッション）",

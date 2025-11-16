@@ -173,13 +173,13 @@ export const projects: Project[] = [
             "フロントエンド：Web フォームから画像アップロード＋進捗表示。",
             "バックエンド：クラウド上の画像生成 API を呼び出し、世代ごとの状態機械で管理。",
             "ストレージ：アップロード画像と生成結果を短期間保持し、自動削除スケジュールを設定。",
-            "ガバナンス：NG プロンプト / NG 出力を避ける制御レイヤを設け、将来的に Gate Runtime 連携を前提とする。",
+            "ガバナンス：NG プロンプト / NG 出力を避ける制御レイヤを設け、内部のセーフティチェックと監査ログ設計で統制。",
           ],
           en: [
             "Frontend: web form for uploads and progress display.",
             "Backend: calls cloud-based image generation APIs and tracks job states.",
             "Storage: keeps uploads/results for a short retention window with automated deletion.",
-            "Governance: control layer to filter NG prompts/outputs with a future path to Gate Runtime integration.",
+            "Governance: layered safety checks and audit-minded logging keep prompts and outputs defensible.",
           ],
         },
       },
@@ -253,12 +253,12 @@ export const projects: Project[] = [
     },
     teaser: {
       description: {
-        ja: "LLM や物理 AI の前段に Gate Runtime を挟み、危険操作を制御するための基盤。",
-        en: "Gateway that wraps LLMs or physical AI with policy controls and signed logs.",
+        ja: "LLM や物理 AI の前段で危険操作を検知・制御するための AIセキュリティ基盤。",
+        en: "AI security platform that sits in front of LLMs or physical AI to contain risky actions before they execute.",
       },
       tags: {
-        ja: ["AI Firewall", "Gate Runtime"],
-        en: ["AI Firewall", "Gate Runtime"],
+        ja: ["AI Firewall", "Governance"],
+        en: ["AI Firewall", "Governance"],
       },
     },
     sections: [
@@ -293,12 +293,12 @@ export const projects: Project[] = [
           ja: [
             "ユーザー → [AIセキュリティシステム] → モデル / ロボットという経路で危険リクエストをブロック。",
             "危険操作・NGワード・機密情報をポリシーとして定義し自動判定。",
-            "JSONL ログとデジタル署名で改ざん検知を可能にする。",
+            "リクエストと応答の証跡を残し、改ざん検知まで含めた監査運用を想定。",
           ],
           en: [
             "Insert [AI Security System] between users and models/robots to block risky requests.",
             "Define policies for dangerous actions, NG words, or sensitive data for automatic evaluation.",
-            "Record JSONL logs with digital signatures to detect tampering.",
+            "Keep auditable traces of every request/response so tampering can be detected.",
           ],
         },
       },
@@ -316,12 +316,12 @@ export const projects: Project[] = [
             },
             items: {
               ja: [
-                "Rego / OPA などルールベースの判定で入力・出力を制御。",
-                "LLM でリスクスコアリングし、高リスク時は人間レビューに回すフローを検討。",
+                "シナリオごとに定義したルールで入力・出力を検査し、危険操作を遮断。",
+                "高リスクなイベントは人によるレビューへ自動的にエスカレーション。",
               ],
               en: [
-                "Rego / OPA-style rules to govern inputs and outputs.",
-                "LLM-assisted risk scoring that can escalate to human review when needed.",
+                "Rules tailored to each scenario inspect inputs and outputs to stop unsafe actions.",
+                "High-risk events automatically escalate to human review.",
               ],
             },
           },
@@ -333,11 +333,11 @@ export const projects: Project[] = [
             items: {
               ja: [
                 "全リクエスト / レスポンスを一意ID付きで記録。",
-                "Ed25519 などの署名とチェーン構造で改ざんを検知。",
+                "改ざん検知の仕組みや署名方式は非公開のまま設計・検証。",
               ],
               en: [
                 "Log every request/response with unique IDs.",
-                "Use signatures such as Ed25519 plus chained hashes for tamper evidence.",
+                "Tamper-evidence schemes remain internal but are designed alongside the logging layer.",
               ],
             },
           },
@@ -348,7 +348,7 @@ export const projects: Project[] = [
             },
             items: {
               ja: [
-                "速度制限や動作範囲制限などを Gate 側で強制。",
+                "速度制限や動作範囲制限などをゲート側で強制。",
                 "緊急停止（kill switch）との連携を前提に設計。",
               ],
               en: [
@@ -364,19 +364,19 @@ export const projects: Project[] = [
             },
             items: {
               ja: [
-                "GCP など既存の MLOps パイプラインにゲートウェイとして挿入可能にする。",
-                "Cloud Run / Envoy 等との親和性を意識した設計を検証中。",
+                "既存のクラウド / オンプレパイプラインにゲートウェイとして挿入できる構成を検討。",
+                "具体的なインフラスタックは非公開のまま、マルチクラウド互換性を前提に設計。",
               ],
               en: [
-                "Insert as a gateway in front of existing GCP or other cloud pipelines.",
-                "Designing for compatibility with Cloud Run, Envoy, and similar runtimes.",
+                "Designing it so the gateway can plug into existing cloud or on-prem MLOps pipelines.",
+                "Infrastructure stack choices stay private, but multi-cloud compatibility is assumed.",
               ],
             },
           },
         ],
         disclaimer: {
-          ja: "リリース時に機能構成が変わる可能性があります。",
-          en: "Functionality is subject to change prior to release.",
+          ja: "リリース時に機能構成が変わる可能性があり、内部構造や署名方式などの詳細は非公開のままです。",
+          en: "Functionality may change prior to release, and implementation details such as signature schemes remain confidential.",
         },
       },
       {
@@ -430,12 +430,12 @@ export const projects: Project[] = [
               ja: [
                 "PoC パートナー企業との共同検証。",
                 "最小機能セットでのクローズドベータ提供。",
-                "ログ / 署名 / ダッシュボードなどのガバナンス機能を段階的に拡張。",
+                "ログ / 可視化 / 監査ダッシュボードなどのガバナンス機能を段階的に拡張。",
               ],
               en: [
                 "PoC collaborations with partner companies.",
                 "Closed beta launch with a minimal complete feature set.",
-                "Gradual expansion of governance features such as dashboards and signed logs.",
+                "Gradual expansion of governance features such as logging, visualization, and audit dashboards.",
               ],
             },
           },
@@ -454,8 +454,8 @@ export const projects: Project[] = [
       },
     ],
     statusNote: {
-      ja: "Gate Runtime / Sentinel-MCP のエッセンスを外部向けに再構築中。",
-      en: "Rebuilding Gate Runtime / Sentinel-MCP concepts into a partner-ready offering.",
+      ja: "これまで培ってきたゲートウェイ設計の知見を、外部パートナーに再提供できる形へ再構築中。",
+      en: "Rebuilding the guardrail concepts we have used internally into a partner-ready offering.",
     },
   },
 ];

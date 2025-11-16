@@ -31,12 +31,12 @@ export const teachingItems: TeachingItem[] = [
     takeaways: {
       ja: [
         "AI 導入時のリスク分類ワークショップ",
-        "Gate Runtime で使用している JSONL ログ構造のハンズオン",
+        "実務で使っているログ設計を題材にしたハンズオン",
         "ガバナンスとアーキテクチャの橋渡し方法",
       ],
       en: [
         "Risk classification workshop for AI deployments",
-        "Hands-on session using Gate Runtime’s JSONL log schema",
+        "Hands-on session using the log design I use in production",
         "How to connect governance docs with technical architecture",
       ],
     },
@@ -48,11 +48,11 @@ export const futureTeachingIdeas: Record<Locale, string[]> = {
   ja: [
     "企業向け AI ガバナンス入門（30〜60分）",
     "GCP 上での安全な AI 運用手引き",
-    "Gate Runtime / Sentinel-MCP を題材にしたログ演習",
+    "AIセキュリティ基盤を題材にしたログ演習",
   ],
   en: [
     "Corporate primer on AI governance (30–60 min)",
     "Operating AI safely on GCP",
-    "Log design workshop using Gate Runtime / Sentinel-MCP",
+    "Log design workshop using an AI security platform",
   ],
 };

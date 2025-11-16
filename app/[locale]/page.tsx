@@ -95,8 +95,8 @@ export default async function LocaleHomePage({ params }: HomePageProps) {
         </h3>
         <p className="mt-1 text-sm text-white/70">
           {locale === "ja"
-            ? "PrimePic・Gate Runtime・早稲田の講義など、一次情報から確認できます。"
-            : "PrimePic, Gate Runtime, and the Waseda lecture are documented with first-hand evidence."}
+            ? "PrimePic や AIセキュリティ基盤、早稲田の講義まで、一次情報から確認できます。"
+            : "PrimePic, my AI security platform, and the Waseda lecture are documented with first-hand evidence."}
         </p>
         <div className="mt-4 grid gap-4 md:grid-cols-3">
           {highlightCards.map((card) => (
@@ -226,7 +226,7 @@ const heroContent: Record<
     eyebrow: "AI GOVERNANCE / SAFETY",
     title: "AIを安全に動かすための仕組みをつくる",
     description:
-      "Gate Runtime / Sentinel-MCP、PrimePic AI、早稲田大学大学院での講義など、一次情報で評価できるアウトプットを公開しています。",
+      "AIセキュリティ基盤や PrimePic AI、早稲田大学大学院での講義など、個人で手掛けている一次情報を公開しています。",
     ctas: [
       { label: "プロジェクト", href: "/{locale}/projects", variant: "primary" },
       { label: "サービス", href: "/{locale}/services", variant: "secondary" },
@@ -237,7 +237,7 @@ const heroContent: Record<
     eyebrow: "AI GOVERNANCE / SAFETY",
     title: "Building infrastructure for safe AI operations",
     description:
-      "Open build logs behind Gate Runtime / Sentinel-MCP, PrimePic AI, and the Waseda lecture so you can evaluate with first-hand evidence.",
+      "I surface first-hand outputs from my AI security platform work, PrimePic AI, and the Waseda lecture so you can evaluate without relying on hype.",
     ctas: [
       { label: "Projects", href: "/{locale}/projects", variant: "primary" },
       { label: "Services", href: "/{locale}/services", variant: "secondary" },
@@ -270,7 +270,8 @@ const pillarContent: Record<
       {
         eyebrow: "GOVERNANCE",
         title: "AIガバナンス・セーフティ設計",
-        body: "Gate Runtime と OPA を用いたポリシー設計、署名付きログ、監査 API の実装。",
+        body:
+          "AIの振る舞いを制御できるポリシー設計と、ログ / 監査の仕組みづくりを個人で担っています。",
       },
       {
         eyebrow: "BUILD",
@@ -292,7 +293,7 @@ const pillarContent: Record<
       {
         eyebrow: "GOVERNANCE",
         title: "Designing guardrails",
-        body: "Rego-based policies, signed JSONL logs, and audit APIs shipped through Gate Runtime.",
+        body: "Designing policy guardrails plus logging / audit layers so AI behavior stays accountable.",
       },
       {
         eyebrow: "BUILD",

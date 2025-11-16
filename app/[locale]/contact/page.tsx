@@ -67,11 +67,11 @@ const copy: Record<
     title: "Googleフォームからお気軽にご連絡ください",
     description:
       "AIガバナンス・AIセーフティのご相談、AI受託開発の依頼、早稲田大学で実施したような講義・ワークショップのご依頼などに対応しています。",
-    points: [
-      "氏名 / メールアドレス / 所属 / ご相談内容をご入力ください。",
-      "用途（受託開発 / ガバナンス / PrimePic / Gate / 講義 / その他）を選択できます。",
-      "予算感や希望する連絡手段は任意で記載可能です。",
-    ],
+      points: [
+        "氏名 / メールアドレス / 所属 / ご相談内容をご入力ください。",
+        "用途（受託開発 / ガバナンス / PrimePic / AIセキュリティ基盤 / 講義 / その他）を選択できます。",
+        "予算感や希望する連絡手段は任意で記載可能です。",
+      ],
     privacy:
       "送信内容は Google フォーム + スプレッドシートで管理し、プライバシーポリシーに基づいて取り扱います。",
   },
@@ -79,11 +79,11 @@ const copy: Record<
     title: "Use the Google Form to start the conversation",
     description:
       "Available for AI governance / safety engagements, custom AI builds, and lectures similar to the Waseda session.",
-    points: [
-      "Share your name, email, affiliation, and the context of the project.",
-      "Pick the purpose (custom dev, governance, PrimePic, Gate Runtime, lecture, or other).",
-      "Budget and preferred communication channel are optional but helpful.",
-    ],
+      points: [
+        "Share your name, email, affiliation, and the context of the project.",
+        "Pick the purpose (custom dev, governance, PrimePic, AI security platform, lecture, or other).",
+        "Budget and preferred communication channel are optional but helpful.",
+      ],
     privacy:
       "Responses are stored in Google Forms + Sheets and handled under the privacy policy listed under /legal/privacy.",
   },

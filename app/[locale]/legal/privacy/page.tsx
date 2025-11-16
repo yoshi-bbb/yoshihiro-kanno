@@ -3,14 +3,13 @@ import { notFound } from "next/navigation";
 import { isLocale, locales } from "@/lib/locales";
 import type { Locale } from "@/lib/locales";
 import {
-  COMPANY_NAME_EN,
-  COMPANY_NAME_JA,
   COMPANY_EMAIL,
+  SITE_OWNER_EN,
+  SITE_OWNER_JA,
 } from "@/lib/config";
 
 const PRIVACY_DOC_URL =
   "https://docs.google.com/document/d/1ahnUTdar62_Vk9_elCf-V1QSsLvNzL_BwMxtAjlphqw/preview";
-const COMPANY_SITE_URL = "https://u-rec.jp/";
 
 interface PrivacyPageProps {
   params: Promise<{ locale: string }>;
@@ -118,16 +117,7 @@ const copy: Record<
     title: "プライバシーポリシー",
     intro: (
       <>
-        このサイトは{" "}
-        <a
-          href={COMPANY_SITE_URL}
-          target="_blank"
-          rel="noreferrer"
-          className="text-[var(--accent)] underline"
-        >
-          {COMPANY_NAME_JA}
-        </a>{" "}
-        が運営し、Googleフォームを通じてお問い合わせ内容を収集します。以下の通り、取得情報と利用目的を明示します。
+        このサイトは {SITE_OWNER_JA}（個人）が運営し、Googleフォームを通じてお問い合わせ内容を収集します。以下の通り、取得情報と利用目的を明示します。
       </>
     ),
     contact: "お問い合わせ窓口",
@@ -164,16 +154,8 @@ const copy: Record<
     title: "Privacy Policy",
     intro: (
       <>
-        <a
-          href={COMPANY_SITE_URL}
-          target="_blank"
-          rel="noreferrer"
-          className="text-[var(--accent)] underline"
-        >
-          {COMPANY_NAME_EN}
-        </a>{" "}
-        operates this portal and collects inquiries via Google Forms. The following statements
-        clarify what is collected and how it is used.
+        {SITE_OWNER_EN} operates this portal personally and collects inquiries via Google Forms. The
+        following statements clarify what is collected and how it is used.
       </>
     ),
     contact: "Contact",

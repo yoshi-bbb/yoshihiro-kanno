@@ -99,7 +99,7 @@ const copy: Record<
     eyebrow: "SERVICES",
     title: "提供サービス / 料金レンジ",
     description:
-      "すべて菅野本人がハンズオンで対応。必要に応じて Gate Runtime や PrimePic の実装資産を活用します。詳細なお見積もりはフォームよりご連絡ください。",
+      "すべて菅野本人がハンズオンで対応。自分の AIセキュリティ基盤や生成AIでの経験を踏まえて提案します。詳細なお見積もりはフォームよりご連絡ください。",
     ctaDescription: "NDAや守備範囲、支払い条件は初回相談で詳細にご案内します。",
     ctaLabel: "お問い合わせ",
   },
@@ -107,7 +107,7 @@ const copy: Record<
     eyebrow: "SERVICES",
     title: "Services & pricing ranges",
     description:
-      "Handled directly by Yoshihiro. Gate Runtime and PrimePic assets can be leveraged when relevant. Contact me for a detailed proposal.",
+      "Handled directly by Yoshihiro, drawing on my AI security platform and generative AI experience. Contact me for a detailed proposal.",
     ctaDescription:
       "We can walk through NDA terms, scope boundaries, and billing cadence during the intro call.",
     ctaLabel: "Contact",
@@ -133,7 +133,7 @@ const faq: Record<
       {
         question: "どこまで対応してもらえますか？",
         answer:
-          "ポリシー策定・レビューだけでなく、Gate Runtime のような実装まで一気通貫でリードします。スポットレビューも歓迎です。",
+          "ポリシー策定・レビューだけでなく、AIセキュリティ基盤の実装まで一気通貫でリードします。スポットレビューも歓迎です。",
       },
       {
         question: "支払い条件は？",
@@ -154,7 +154,7 @@ const faq: Record<
       {
         question: "What’s the engagement scope?",
         answer:
-          "Anything from policy reviews to hands-on builds like Gate Runtime. I also support short-term architecture or security reviews.",
+          "Anything from policy reviews to hands-on builds of AI security platforms. I also support short-term architecture or security reviews.",
       },
       {
         question: "How do payments work?",
